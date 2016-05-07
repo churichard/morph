@@ -28,6 +28,7 @@
   <backgrounds name="background">
     <background>background\bg_warehouse</background>
     <background>background\bg_tiles</background>
+    <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -42,6 +43,7 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_health</object>
       <object>objects\obj_wallCol</object>
+      <object>objects\rm_2_floor</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_main</object>
@@ -51,6 +53,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_boss1</room>
+    <room>rooms\rm_boss2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
