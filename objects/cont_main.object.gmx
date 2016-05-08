@@ -25,9 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_healthbar_bg, 1, view_xview[0] + 46, view_yview[0] + 34);
+            <string>// Draw player health bar
+draw_sprite(spr_healthbar_bg, 1, view_xview[0] + 46, view_yview[0] + 34);
 draw_sprite_ext(spr_healthbar_inner, 1, view_xview[0] + 46, view_yview[0] + 34, obj_player.hp / obj_player.maxHP, 1, 0, c_white, 1);
 draw_sprite(spr_healthbar_border, 1, view_xview[0] + 15, view_yview[0] + 15);
+
+// Draw boss health bar
+draw_healthbar(view_xview[0] + 46, view_yview + 80, view_xview[0] + 221, view_yview + 100, obj_needle.hp, c_black, c_red, c_green, 0, true, 0);
 </string>
           </argument>
         </arguments>
