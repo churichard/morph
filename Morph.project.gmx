@@ -4,14 +4,19 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\music_background</sound>
+    <sound>sound\music_menu</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
       <sprite>sprites\spr_player_front</sprite>
       <sprite>sprites\spr_player_left</sprite>
       <sprite>sprites\spr_player_right</sprite>
       <sprite>sprites\spr_player_back</sprite>
-      <sprite>sprites\spr_drill</sprite>
+      <sprite>sprites\spr_drill_hor</sprite>
+      <sprite>sprites\spr_drill_vert</sprite>
+      <sprite>sprites\spr_drill_spin</sprite>
     </sprites>
     <sprites name="Objects">
       <sprite>sprites\spr_wall</sprite>
@@ -39,6 +44,7 @@
     <script>scripts\scr_animate.gml</script>
     <script>scripts\scr_animate_player.gml</script>
     <script>scripts\scr_menu.gml</script>
+    <script>scripts\scr_animate_boss2.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
