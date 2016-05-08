@@ -11,6 +11,7 @@
       <sprite>sprites\spr_player_left</sprite>
       <sprite>sprites\spr_player_right</sprite>
       <sprite>sprites\spr_player_back</sprite>
+      <sprite>sprites\spr_drill</sprite>
     </sprites>
     <sprites name="Objects">
       <sprite>sprites\spr_wall</sprite>
@@ -18,6 +19,7 @@
       <sprite>sprites\spr_health</sprite>
       <sprite>sprites\spr_crate_mask</sprite>
       <sprite>sprites\spr_wallCol</sprite>
+      <sprite>sprites\spr_menu_arrow</sprite>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\spr_healthbar_border</sprite>
@@ -36,10 +38,15 @@
   <scripts name="scripts">
     <script>scripts\scr_animate.gml</script>
     <script>scripts\scr_animate_player.gml</script>
+    <script>scripts\scr_menu.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <objects name="Characters">
       <object>objects\obj_player</object>
+      <object>objects\obj_boss2</object>
     </objects>
     <objects name="Objects">
       <object>objects\obj_wall</object>
@@ -51,12 +58,17 @@
       <object>objects\cont_main</object>
       <object>objects\cont_spawn</object>
       <object>objects\cont_view</object>
+      <object>objects\cont_menu</object>
     </objects>
     <objects name="Weapons">
       <object>objects\obj_sword</object>
     </objects>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\timeline0</timeline>
+  </timelines>
   <rooms name="rooms">
+    <room>rooms\rm_menu</room>
     <room>rooms\rm_boss1</room>
     <room>rooms\rm_boss2</room>
   </rooms>
