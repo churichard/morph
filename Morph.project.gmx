@@ -23,12 +23,15 @@
       <sprite>sprites\spr_healthbar_border</sprite>
       <sprite>sprites\spr_healthbar_inner</sprite>
       <sprite>sprites\spr_healthbar_bg</sprite>
+      <sprite>sprites\spr_skull</sprite>
+      <sprite>sprites\spr_heart</sprite>
     </sprites>
     <sprites name="Weapons">
       <sprite>sprites\spr_sword</sprite>
     </sprites>
-    <sprites name="Enemies">
+    <sprites name="Needle">
       <sprite>sprites\spr_needle</sprite>
+      <sprite>sprites\spr_anesthetic</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -58,8 +61,9 @@
     <objects name="Weapons">
       <object>objects\obj_sword</object>
     </objects>
-    <objects name="Enemies">
+    <objects name="Needle">
       <object>objects\obj_needle</object>
+      <object>objects\obj_anesthetic</object>
     </objects>
   </objects>
   <rooms name="rooms">
