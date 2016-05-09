@@ -60,7 +60,13 @@ instance_create(x + weapon_x_offset, y + weapon_y_offset, obj_sword);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Update sword position
+            <string>// Check to see that x and y are within the room boundaries
+if (x &lt; 16) x = 16;
+if (x &gt;= room_width - 16) x = room_width - 16;
+if (y &lt; 16) y = 16;
+if (y &gt;= room_height - 16) y = room_height - 16;
+
+// Update sword position
 obj_sword.x = x + weapon_x_offset;
 obj_sword.y = y + weapon_y_offset;
 </string>
