@@ -12,17 +12,7 @@
       <sprite>sprites\spr_player_right</sprite>
       <sprite>sprites\spr_player_back</sprite>
     </sprites>
-    <sprites name="Objects">
-      <sprite>sprites\spr_wall</sprite>
-      <sprite>sprites\spr_crate</sprite>
-      <sprite>sprites\spr_health</sprite>
-      <sprite>sprites\spr_crate_mask</sprite>
-      <sprite>sprites\spr_wallCol</sprite>
-    </sprites>
     <sprites name="UI">
-      <sprite>sprites\spr_healthbar_border</sprite>
-      <sprite>sprites\spr_healthbar_inner</sprite>
-      <sprite>sprites\spr_healthbar_bg</sprite>
       <sprite>sprites\spr_skull</sprite>
       <sprite>sprites\spr_heart</sprite>
     </sprites>
@@ -48,14 +38,11 @@
       <object>objects\obj_player</object>
     </objects>
     <objects name="Objects">
-      <object>objects\obj_wall</object>
       <object>objects\obj_health</object>
-      <object>objects\obj_wallCol</object>
       <object>objects\rm_2_floor</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_main</object>
-      <object>objects\cont_spawn</object>
       <object>objects\cont_view</object>
     </objects>
     <objects name="Weapons">

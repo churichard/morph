@@ -28,6 +28,10 @@
             <string>moveSpeed = 10;
 player_x = obj_player.x;
 player_y = obj_player.y;
+dist = point_distance(x, y, player_x, player_y);
+image_angle = random_range(0, 360);
+image_xscale = 0.01;
+image_yscale = 0.01;
 </string>
           </argument>
         </arguments>
@@ -101,6 +105,8 @@ instance_destroy();
     var angle = point_direction(x, y, player_x, player_y);
     x += lengthdir_x(moveSpeed, angle);
     y += lengthdir_y(moveSpeed, angle);
+    image_xscale += 1 / (dist / moveSpeed);
+    image_yscale += 1 / (dist / moveSpeed);
 } else if (alarm[1] = -1) {
     alarm[1] = 4 * room_speed; // Drop lasts for four seconds
 } else {
