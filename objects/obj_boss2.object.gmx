@@ -26,9 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>obj_boss2.hp = 1000;
-obj_boss2.velocity = 5;
+obj_boss2.velocity = 3;
 obj_boss2.spinning = false;
+
+// Spin attack timer
 alarm[0] = 5 * room_speed;
+
+depth = -100;
 </string>
           </argument>
         </arguments>
@@ -54,6 +58,9 @@ alarm[0] = 5 * room_speed;
             <string>sprite_index = spr_drill_spin;
 
 self.spinning = true;
+self.counter = 0;
+
+alarm[0]= 5*room_speed;
 </string>
           </argument>
         </arguments>
@@ -76,31 +83,40 @@ self.spinning = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>script_execute(scr_animate_boss2);
+            <string>delTheta = 24;
 
-hspeed = obj_boss2.velocity * obj_player.hspeed;
-vspeed = obj_boss2.velocity * obj_player.vspeed;
-
-// Collisions
-if (hspeed != 0 &amp;&amp; !place_free(x + hspeed, y)) {
-    if (hspeed &gt; 0) move_contact_solid(0, hspeed);
-    if (hspeed &lt; 0) move_contact_solid(180, -hspeed);
-    hspeed = 0;
-}
-if (vspeed != 0 &amp;&amp; !place_free(x, y + vspeed)) {
-    if (vspeed &gt; 0) move_contact_solid(270, vspeed);
-    if (vspeed &lt; 0) move_contact_solid(90, -vspeed);
-    vspeed = 0;
-}
-
+// Spin attack
 if (self.spinning){
     image_angle = direction;
-    chk = direction;
-    direction += 36;
-    if (chk + 36 &gt;= 360)
+    direction += delTheta;
+    self.counter++;
+    if (counter &gt;= 1080/delTheta){
         self.spinning = false;
         image_angle = 0;
+        self.counter = 0;
+    }
 }
+
+
+
+else{
+    mp_potential_step(obj_player.x, obj_player.y, velocity, true);
+
+    script_execute(scr_animate_boss2);
+
+// Collisions
+    if (hspeed != 0 &amp;&amp; !place_free(x + hspeed, y)) {
+        if (hspeed &gt; 0) move_contact_solid(0, hspeed);
+        if (hspeed &lt; 0) move_contact_solid(180, -hspeed);
+        hspeed = 0;
+    }
+    if (vspeed != 0 &amp;&amp; !place_free(x, y + vspeed)) {
+        if (vspeed &gt; 0) move_contact_solid(270, vspeed);
+        if (vspeed &lt; 0) move_contact_solid(90, -vspeed);
+        vspeed = 0;
+    }
+}
+
 
 if (hp &lt;= 0) room_goto(rm_menu);
 </string>

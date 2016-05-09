@@ -34,17 +34,21 @@
     <sprites name="Weapons">
       <sprite>sprites\spr_sword</sprite>
     </sprites>
+    <sprite>sprites\spr_island_piece</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_warehouse</background>
     <background>background\background2</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\scr_animate.gml</script>
     <script>scripts\scr_animate_player.gml</script>
     <script>scripts\scr_menu.gml</script>
     <script>scripts\scr_animate_boss2.gml</script>
+    <script>scripts\scr_AI_boss2.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
