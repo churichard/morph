@@ -30,10 +30,18 @@
       <sprite>sprites\spr_needle</sprite>
       <sprite>sprites\spr_anesthetic</sprite>
     </sprites>
+    <sprites name="Objects">
+      <sprite>sprites\spr_hospital_door</sprite>
+      <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_emergency_red</sprite>
+      <sprite>sprites\spr_emergency_green</sprite>
+      <sprite>sprites\spr_plus</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background2</background>
     <background>background\bg_granite</background>
+    <background>background\bg_hospital_floor</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -47,6 +55,11 @@
     <objects name="Objects">
       <object>objects\obj_health</object>
       <object>objects\rm_2_floor</object>
+      <object>objects\obj_hospital_door</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_emergency_red</object>
+      <object>objects\obj_emergency_green</object>
+      <object>objects\obj_plus</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_main</object>
@@ -61,6 +74,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_hospital</room>
     <room>rooms\rm_boss1</room>
     <room>rooms\rm_boss2</room>
   </rooms>
