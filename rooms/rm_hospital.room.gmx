@@ -11,9 +11,7 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>obj_player.player_x = obj_player.xstart;
-obj_player.player_y = obj_player.ystart;
-//audio_stop_all();
-//audio_play_sound(snd_hospital_theme, 2, 1);</code>
+obj_player.player_y = obj_player.ystart;</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

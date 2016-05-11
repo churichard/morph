@@ -236,7 +236,10 @@ if (attack = "preparing") {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Bounce up and down
+            <string>// Set depth
+depth = -y;
+
+// Bounce up and down
 if (attack = noone || attack = "preparing") {
     if (bouncingUp) y += bouncing_speed;
     else y -= bouncing_speed;

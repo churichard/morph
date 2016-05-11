@@ -73,6 +73,7 @@
       <sprite>sprites\spr_drill_hor</sprite>
       <sprite>sprites\spr_drill_vert</sprite>
       <sprite>sprites\spr_drill_spin</sprite>
+      <sprite>sprites\spr_hole</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -120,6 +121,7 @@
     </objects>
     <objects name="Drill">
       <object>objects\obj_drill</object>
+      <object>objects\obj_hole</object>
     </objects>
     <objects name="UI">
       <object>objects\cont_menu</object>
@@ -129,10 +131,10 @@
     <timeline>timelines\timeline0</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\rm_boss2</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_hospital</room>
     <room>rooms\rm_boss1</room>
-    <room>rooms\rm_boss2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

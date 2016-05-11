@@ -54,6 +54,7 @@ audio_play_sound(snd_boss2_theme, 2, 1);</code>
   <instances>
     <instance objName="obj_drill" x="576" y="128" name="inst_4A42DACF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cont_boss" x="32" y="32" name="inst_2E62BB4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="512" y="608" name="inst_D84BA1EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
