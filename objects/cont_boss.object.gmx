@@ -32,12 +32,12 @@ draw_healthbar(view_xview[0] + 60, view_yview[0] + 32, view_xview[0] + 230, view
 // Draw boss health bar
 if (instance_exists(obj_needle)) {
     draw_sprite(spr_skull, 1, view_xview[0] + 35, view_yview[0] + 80);
-    draw_healthbar(view_xview[0] + 60, view_yview[0] + 70, view_xview[0] + 230, view_yview[0] + 90, obj_needle.hp, c_black, c_maroon, c_maroon, 0, true, 1);
+    draw_healthbar(view_xview[0] + 60, view_yview[0] + 70, view_xview[0] + 230, view_yview[0] + 90, obj_needle.hp / obj_needle.maxHP * 100, c_black, c_maroon, c_maroon, 0, true, 1);
 }
 
 if (instance_exists(obj_drill)) {
     draw_sprite(spr_skull, 1, view_xview[0] + 35, view_yview[0] + 80);
-    draw_healthbar(view_xview[0] + 60, view_yview[0] + 70, view_xview[0] + 230, view_yview[0] + 90, obj_drill.hp, c_black, c_maroon, c_maroon, 0, true, 1);
+    draw_healthbar(view_xview[0] + 60, view_yview[0] + 70, view_xview[0] + 230, view_yview[0] + 90, obj_drill.hp / obj_drill.maxHP * 100, c_black, c_maroon, c_maroon, 0, true, 1);
 }
 
 // Draw Game Over text

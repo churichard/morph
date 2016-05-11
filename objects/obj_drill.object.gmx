@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = 50;
+            <string>maxHP = 75;
+hp = maxHP;
 velocity = 3;
 delTheta = 24;
 attack = noone;
