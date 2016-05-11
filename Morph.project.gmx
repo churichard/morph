@@ -105,12 +105,14 @@
       <object>objects\obj_plus</object>
       <object>objects\obj_wallCol</object>
       <object>objects\obj_door_glow</object>
+      <object>objects\effFadeToBlack</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_boss</object>
       <object>objects\cont_view</object>
       <object>objects\cont_hospital</object>
       <object>objects\cont_game_manager</object>
+      <object>objects\cont_credits</object>
     </objects>
     <objects name="Weapons">
       <object>objects\obj_sword</object>
@@ -127,12 +129,11 @@
       <object>objects\cont_menu</object>
     </objects>
   </objects>
-  <timelines name="timelines">
-    <timeline>timelines\timeline0</timeline>
-  </timelines>
+  <timelines name="timelines"/>
   <rooms name="rooms">
-    <room>rooms\rm_boss2</room>
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_credits</room>
+    <room>rooms\rm_boss2</room>
     <room>rooms\rm_hospital</room>
     <room>rooms\rm_boss1</room>
   </rooms>

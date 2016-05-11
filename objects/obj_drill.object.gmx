@@ -32,7 +32,164 @@ attack = noone;
 currentHole = noone;
 
 // Spin attack timer
-alarm[0] = 5 * room_speed;
+alarm[0] = (5 + random_range(-1, 1)) * room_speed;
+
+// Charge timer
+alarm[1] = (7 + random_range(-1, 1)) * room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hspeed = 0;
+vspeed = 0;
+script_execute(scr_animate_boss2);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>move_towards_point(obj_player.x, obj_player.y, velocity);
+script_execute(scr_animate_boss2);
+alarm[6] = 0.75 * room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>audio_play_sound(snd_hit, 1, 0);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hspeed = 0;
+vspeed = 0;
+move_towards_point(obj_player.x, obj_player.y, velocity);
+attack = noone;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>move_towards_point(obj_player.x, obj_player.y, 5 * velocity);
+attack = "charging";
+alarm[3] = 3 * room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (attack = noone) {
+    attack = "preparing";
+    vspeed = 0;
+    hspeed = 0;
+    alarm[2] = 2 * room_speed;
+}
+
+alarm[1] = (9 + random_range(-1, 1)) * room_speed;
 </string>
           </argument>
         </arguments>
@@ -63,8 +220,30 @@ alarm[0] = 5 * room_speed;
     currentHole = instance_create(x + 5, y + 5, obj_hole);
 }
 
-alarm[0] = 5 * room_speed;
+alarm[0] = (5 + random_range(-1, 1)) * room_speed;
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -105,23 +284,50 @@ if (attack = "spinning"){
         image_angle = 0;
         self.counter = 0;
     }
-}
-else{
-    move_towards_point(obj_player.x, obj_player.y, velocity);
-    //mp_potential_step(obj_player.x, obj_player.y, velocity, true);
-    script_execute(scr_animate_boss2);
+} else if (attack = "preparing") {
+    image_blend = make_color_rgb(0, 255, 255);
+} else if (attack = noone) {
+    image_blend = c_white;
+    if (alarm[5] = -1 &amp;&amp; alarm[6] = -1) {
+        alarm[5] = 0.25 * room_speed;
+    }
 }
 
 // Destroy enemy
 if (hp &lt;= 0) {
     instance_destroy();
-    effect_create_above(ef_explosion, x, y, 2, c_blue);
+    effect_create_above(ef_explosion, x, y, 2, c_aqua);
     audio_stop_sound(snd_boss2_theme);
     audio_play_sound(snd_explosion, 1, 0);
     global.bosses_killed += 1;
-    instance_create(512, 767, obj_door_glow);
+    door_glow = instance_find(obj_door_glow, 0);
+    door_glow.visible = true;
     audio_play_sound(snd_door_open, 1, 0);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_wallCol">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Bounce off solid objects
+move_bounce_solid(true);
 </string>
           </argument>
         </arguments>
@@ -144,7 +350,8 @@ if (hp &lt;= 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>other.hp -= 0.5;
+            <string>other.hp -= 1;
+if (alarm[4] = -1) alarm[4] = 0.1 * room_speed;
 </string>
           </argument>
         </arguments>

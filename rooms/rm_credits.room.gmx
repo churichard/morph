@@ -8,10 +8,9 @@
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
-  <colour>12632256</colour>
+  <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>audio_stop_all();
-audio_play_sound(snd_boss2_theme, 2, 1);</code>
+  <code></code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -32,7 +31,7 @@ audio_play_sound(snd_boss2_theme, 2, 1);</code>
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="bg_mouth" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -52,13 +51,7 @@ audio_play_sound(snd_boss2_theme, 2, 1);</code>
     <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_drill" x="576" y="128" name="inst_4A42DACF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cont_boss" x="32" y="32" name="inst_2E62BB4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wallCol" x="-32" y="-32" name="inst_B35C0500" locked="0" code="" scaleX="1" scaleY="26" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wallCol" x="0" y="-32" name="inst_DF7C03FD" locked="0" code="" scaleX="33" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wallCol" x="1024" y="0" name="inst_7CAB9FE8" locked="0" code="" scaleX="1" scaleY="24" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wallCol" x="0" y="768" name="inst_D5B933BB" locked="0" code="" scaleX="33" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_glow" x="512" y="767" name="inst_E1D5FFF3" locked="0" code="target_x = 640;&#xA;target_y = 288;&#xA;target_room = rm_hospital;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cont_credits" x="32" y="32" name="inst_8BD10395" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

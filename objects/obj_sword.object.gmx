@@ -151,6 +151,14 @@ if (hit &amp;&amp; canHit) {
     hit = false;
     canHit = false;
     audio_play_sound(snd_sword_hit, 1, 0);
+    if (obj_player.sprite_index = spr_player_left)
+        effect_create_above(ef_flare, x - 49, y, 1, c_white);
+    else if (obj_player.sprite_index = spr_player_right)
+        effect_create_above(ef_flare, x + 49, y, 1, c_white);
+    else if (obj_player.sprite_index = spr_player_front)
+        effect_create_above(ef_flare, x, y + 49, 1, c_white);
+    else if (obj_player.sprite_index = spr_player_back)
+        effect_create_above(ef_flare, x, y - 49, 1, c_white);
 }
 </string>
           </argument>
