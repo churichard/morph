@@ -141,8 +141,8 @@ instance_destroy();
 
 // Check for collision
 var col = collision_rectangle(x - 33, y - 32, x + 33, y + 32, obj_player, true, true);
-if (col = noone) hitting_player = false;
-else hitting_player = true;
+if (col != noone &amp;&amp; col.visible) hitting_player = true;
+else hitting_player = false;
 
 if (hitting_player &amp;&amp; alarm[2] = -1) alarm[2] = 0.2 * room_speed;
 else if (!hitting_player) alarm[2] = -1;

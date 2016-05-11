@@ -34,6 +34,17 @@ if (instance_exists(obj_needle)) {
     draw_sprite(spr_skull, 1, view_xview[0] + 35, view_yview[0] + 80);
     draw_healthbar(view_xview[0] + 60, view_yview[0] + 70, view_xview[0] + 230, view_yview[0] + 90, obj_needle.hp, c_black, c_maroon, c_maroon, 0, true, 1);
 }
+
+if (instance_exists(obj_drill)) {
+    draw_sprite(spr_skull, 1, view_xview[0] + 35, view_yview[0] + 80);
+    draw_healthbar(view_xview[0] + 60, view_yview[0] + 70, view_xview[0] + 230, view_yview[0] + 90, obj_drill.hp, c_black, c_maroon, c_maroon, 0, true, 1);
+}
+
+// Draw Game Over text
+if (obj_player.hp &lt;= 0) {
+    draw_set_halign(fa_middle);
+    draw_text_transformed(512, 384, "Game Over!", 2, 2, 0);
+}
 </string>
           </argument>
         </arguments>

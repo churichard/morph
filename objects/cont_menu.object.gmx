@@ -25,10 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>menu[0] = "Start";
+            <string>font1 = font_add("VCR_OSD_Mono.ttf", 24, false, false, 32, 128);
+draw_set_valign(fa_middle);
+draw_set_color(c_white);
+draw_set_font(font1);
+
+menu[0] = "Start";
 menu[1] = "Quit";
 
-space = 64;
+space = 52;
 mpos = 0;
 </string>
           </argument>
@@ -89,23 +94,21 @@ if (push == 1) scr_menu();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_left);
-draw_set_valign(fa_middle);
-draw_set_color(c_white);
-
-var m;
+            <string>var m;
 
 // Draw Title
+draw_set_halign(fa_middle);
+draw_text_transformed(512, 160, "Morph", 2, 2, 0);
 
-draw_text(x - 300, y - 300, string("MORPH"));
-
-//Draw menu options
-draw_set_font(font0);
-for (m = 0; m &lt; array_length_1d(menu); m+= 1){
-    draw_text(x + space, y + m * space +16, string(menu[m]));   
+// Draw menu options
+/*for (m = 0; m &lt; array_length_1d(menu); m += 1){
+    draw_text(512, 416 + space * m, string(menu[m]));   
+}*/
+for (m = 0; m &lt; array_length_1d(menu); m += 1){
+    draw_text_transformed(512, 416 + space * m, string(menu[m]), 1.5, 1.5, 0);   
 }
 
-draw_sprite(sprite_index, 0, x+16, y+mpos*space);
+draw_sprite(sprite_index, 0, x - 10, y + mpos * space);
 </string>
           </argument>
         </arguments>
