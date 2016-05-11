@@ -14,11 +14,13 @@
     <sounds name="Hospital">
       <sound>sound\snd_hospital_theme</sound>
       <sound>sound\snd_door_open</sound>
+      <sound>sound\snd_electricity_out</sound>
       <sound>sound\snd_door_close</sound>
       <sound>sound\snd_ding</sound>
     </sounds>
     <sound>sound\snd_explosion</sound>
-    <sound>sound\snd_electricity_out</sound>
+    <sound>sound\snd_boss2_theme</sound>
+    <sound>sound\snd_menu</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
@@ -28,6 +30,7 @@
       <sprite>sprites\spr_player_back</sprite>
     </sprites>
     <sprites name="UI">
+      <sprite>sprites\spr_menu_arrow</sprite>
       <sprite>sprites\spr_skull</sprite>
       <sprite>sprites\spr_heart</sprite>
     </sprites>
@@ -47,25 +50,34 @@
       <sprite>sprites\spr_wallCol</sprite>
       <sprite>sprites\spr_door_glow</sprite>
     </sprites>
+    <sprites name="Drill">
+      <sprite>sprites\spr_drill_hor</sprite>
+      <sprite>sprites\spr_drill_vert</sprite>
+      <sprite>sprites\spr_drill_spin</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\background2</background>
     <background>background\bg_granite</background>
     <background>background\bg_hospital_floor</background>
+    <background>background\bg_mouth</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_animate.gml</script>
     <script>scripts\scr_animate_player.gml</script>
+    <script>scripts\scr_animate_boss2.gml</script>
+    <script>scripts\scr_menu.gml</script>
+    <script>scripts\scr_spin_drill.gml</script>
   </scripts>
-  <fonts name="fonts"/>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <objects name="Characters">
       <object>objects\obj_player</object>
     </objects>
     <objects name="Objects">
       <object>objects\obj_health</object>
-      <object>objects\rm_2_floor</object>
       <object>objects\obj_hospital_door</object>
       <object>objects\obj_wall</object>
       <object>objects\obj_emergency_red</object>
@@ -87,9 +99,18 @@
       <object>objects\obj_needle</object>
       <object>objects\obj_anesthetic</object>
     </objects>
+    <objects name="Drill">
+      <object>objects\obj_boss2</object>
+    </objects>
+    <objects name="UI">
+      <object>objects\cont_menu</object>
+    </objects>
   </objects>
-  <timelines name="timelines"/>
+  <timelines name="timelines">
+    <timeline>timelines\timeline0</timeline>
+  </timelines>
   <rooms name="rooms">
+    <room>rooms\rm_menu</room>
     <room>rooms\rm_hospital</room>
     <room>rooms\rm_boss1</room>
     <room>rooms\rm_boss2</room>

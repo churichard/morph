@@ -301,7 +301,7 @@ if (hp &lt;= 0) {
     audio_stop_sound(snd_boss1_theme);
     audio_play_sound(snd_explosion, 1, 0);
     global.bosses_killed += 1;
-    instance_create(512, 736, obj_door_glow);
+    instance_create(512, 767, obj_door_glow);
     audio_play_sound(snd_door_open, 1, 0);
 }
 </string>

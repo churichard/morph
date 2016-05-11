@@ -37,7 +37,7 @@ instance_create(x, y, cont_view);
 // Initiate weapon
 weapon_x_offset = 0;
 weapon_y_offset = 15;
-instance_create(x + weapon_x_offset, y + weapon_y_offset, obj_sword);
+weapon = instance_create(x + weapon_x_offset, y + weapon_y_offset, obj_sword);
 </string>
           </argument>
         </arguments>
@@ -119,7 +119,11 @@ if (vspeed != 0 &amp;&amp; !place_free(x, y + vspeed)) {
 }
 
 // Player Death
-if (hp &lt;= 0) game_end();
+if (hp &lt;= 0) {
+    instance_destroy();
+    with (weapon) instance_destroy();
+    room_goto(rm_menu);
+}
 </string>
           </argument>
         </arguments>
