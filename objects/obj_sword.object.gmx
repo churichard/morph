@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -64,6 +64,8 @@ image_index = 0;
 visible = 0;
 player_hspeed = 0;
 player_vspeed = 0;
+obj_player.hspeed = 0;
+obj_player.vspeed = 0;
 
 // Reset hit variables
 canHit = true;
@@ -118,10 +120,28 @@ else if (obj_player.vspeed &gt; 0) {
 
 // Glide forward when attacking
 if (obj_player.attacking) {
+    // Move player if possible and update speeds
+    if (player_hspeed &gt; 0 &amp;&amp; !place_free(obj_player.x + 16 + player_hspeed, obj_player.y)) {
+        move_contact_solid(0, player_hspeed);
+        player_hspeed = 0;
+    }
+    if (player_hspeed &lt; 0 &amp;&amp; !place_free(obj_player.x - 16 + player_hspeed, obj_player.y)) {
+        move_contact_solid(180, -player_hspeed);
+        player_hspeed = 0;
+    }
+    if (player_vspeed &gt; 0 &amp;&amp; !place_free(obj_player.x, obj_player.y + 16 + player_vspeed)) {
+        move_contact_solid(270, player_vspeed);
+        player_vspeed = 0;
+    }
+    if (player_vspeed &lt; 0 &amp;&amp; !place_free(obj_player.x, obj_player.y - 16 + player_vspeed)) {
+        move_contact_solid(90, -player_vspeed);
+        player_vspeed = 0;
+    }
+    
     obj_player.x += player_hspeed;
-    obj_player.y += player_vspeed;
     if (player_hspeed &lt; 0) player_hspeed += 0.3;
     else if (player_hspeed &gt; 0) player_hspeed -= 0.3;
+    obj_player.y += player_vspeed;
     if (player_vspeed &lt; 0) player_vspeed += 0.3;
     else if (player_vspeed &gt; 0) player_vspeed -= 0.3;
 }
@@ -216,6 +236,8 @@ if (!obj_player.attacking) {
     alarm[0] = 0.5 * room_speed; // When the player can next attack
     player_hspeed = obj_player.hspeed;
     player_vspeed = obj_player.vspeed;
+    obj_player.hspeed = 0;
+    obj_player.vspeed = 0;
 }
 </string>
           </argument>

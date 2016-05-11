@@ -11,6 +11,14 @@
     <sound>sound\snd_sword_hit</sound>
     <sound>sound\snd_boss1_theme</sound>
     <sound>sound\snd_hit</sound>
+    <sounds name="Hospital">
+      <sound>sound\snd_hospital_theme</sound>
+      <sound>sound\snd_door_open</sound>
+      <sound>sound\snd_door_close</sound>
+      <sound>sound\snd_ding</sound>
+    </sounds>
+    <sound>sound\snd_explosion</sound>
+    <sound>sound\snd_electricity_out</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
@@ -36,6 +44,8 @@
       <sprite>sprites\spr_emergency_red</sprite>
       <sprite>sprites\spr_emergency_green</sprite>
       <sprite>sprites\spr_plus</sprite>
+      <sprite>sprites\spr_wallCol</sprite>
+      <sprite>sprites\spr_door_glow</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -60,10 +70,14 @@
       <object>objects\obj_emergency_red</object>
       <object>objects\obj_emergency_green</object>
       <object>objects\obj_plus</object>
+      <object>objects\obj_wallCol</object>
+      <object>objects\obj_door_glow</object>
     </objects>
     <objects name="Controllers">
-      <object>objects\cont_main</object>
+      <object>objects\cont_boss</object>
       <object>objects\cont_view</object>
+      <object>objects\cont_hospital</object>
+      <object>objects\cont_game_manager</object>
     </objects>
     <objects name="Weapons">
       <object>objects\obj_sword</object>
