@@ -176,10 +176,12 @@ if (hp &lt;= 0 &amp;&amp; alarm[0] = -1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player_x = other.target_x;
-player_y = other.target_y;
-room_goto(other.target_room);
-audio_stop_all();
+            <string>if (other.visible) {
+    player_x = other.target_x;
+    player_y = other.target_y;
+    room_goto(other.target_room);
+    audio_stop_all();
+}
 </string>
           </argument>
         </arguments>
